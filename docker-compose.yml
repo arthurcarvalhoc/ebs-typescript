@@ -6,3 +6,7 @@ services:
     restart: "always"
     ports:
       - 3000:3000
+    volumes:
+    - .:/usr/src/app:rw
+    command: sh -c "ls & npm run build & npm start"
+
