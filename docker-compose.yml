@@ -8,5 +8,12 @@ services:
       - 3000:3000
     volumes:
     - .:/usr/src/app:rw
-    command: sh -c "ls & npm run build & npm start"
+    command:
+      - /bin/sh
+      - -c
+      - |
+        echo "baeldung"
+        echo "docker"
+        yarn install
+        yarn start 
 
